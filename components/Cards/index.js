@@ -23,10 +23,10 @@ const cardContainer = document.querySelector('.cards-container');
 axios.get('https://lambda-times-backend.herokuapp.com/articles')
     .then(response => {
         articleData = response.data.articles;
-        console.log(response.data.articles);
+        // console.log(response.data.articles);
         
         const articleKeys = Object.keys(articleData);
-        console.log(articleKeys);
+        // console.log(articleKeys);
 
         articleKeys.forEach(art => {
             articleData[art].forEach(indyData => {

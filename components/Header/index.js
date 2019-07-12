@@ -27,7 +27,7 @@ function header() {
 
     // Create text content where necessary
     headerDate.textContent = 'March 28, 2019';
-    headerTemp.textContent = '98 degrees';
+    headerTemp.innerHTML = '98&deg';
 
     // Attach elements where necessary
     header.appendChild(headerDate);
