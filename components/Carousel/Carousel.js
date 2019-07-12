@@ -33,6 +33,8 @@ function carouselCreator() {
   const img4 = document.createElement('img');
   const rightButton = document.createElement('div');
 
+  let index = 0;
+
   // Create class lists
 
   carousel.classList.add('carousel');
@@ -41,10 +43,12 @@ function carouselCreator() {
 
   // Create text content
 
-  img1.src = './assets/carousel/mountains.jpeg';
-  img2.src = './assets/carousel/computer.jpeg';
-  img3.src = './assets/carousel/trees.jpeg';
-  img4.src = './assets/carousel/turntable.jpeg';
+  img1.src = '../assets/carousel/mountains.jpeg';
+  img2.src = '../assets/carousel/computer.jpeg';
+  img3.src = '../assets/carousel/trees.jpeg';
+  img4.src = '../assets/carousel/turntable.jpeg';
+
+  img1.style.display = 'block';
 
   // Append children
 
@@ -55,8 +59,39 @@ function carouselCreator() {
   carousel.appendChild(img4);
   carousel.appendChild(rightButton);
 
+  
+  
+  rightButton.addEventListener('click', event => {
+    const carouselImg = document.querySelectorAll('.carousel img');
+    carouselImg[index].style.display = 'none';
+
+    if (index === carouselImg.length - 1) {
+      index = 0;
+    } else {
+      index += 1
+    }
+
+    carouselImg[index].style.display = 'block';  
+  })
+
+  leftButton.addEventListener('click', event => {
+    const carouselImg = document.querySelectorAll('.carousel img');
+    carouselImg[index].style.display = 'none';
+
+    if (index === 0) {
+      index = carouselImg.length - 1;
+    } else {
+      index -= 1
+    }
+
+    carouselImg[index].style.display = 'block';  
+  })
+  
+
   return carousel;
 }
+
+
 
 
 

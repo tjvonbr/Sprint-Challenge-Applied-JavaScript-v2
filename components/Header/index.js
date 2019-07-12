@@ -28,6 +28,7 @@ function header() {
     // Create text content where necessary
     headerDate.textContent = 'March 28, 2019';
     headerTemp.innerHTML = '98&deg';
+    headerTitle.textContent = 'Lambda Times';
 
     // Attach elements where necessary
     header.appendChild(headerDate);
