@@ -23,6 +23,7 @@ carouselContainer.appendChild(carouselCreator());
 
 function carouselCreator() {
   // Create elements
+  console.log('hey there');
 
   const carousel = document.createElement('div');
   const leftButton = document.createElement('div');
